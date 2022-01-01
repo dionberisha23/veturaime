@@ -64,6 +64,21 @@
 		position: relative 25px;
 		align-content: top;
 	}
+	div#animacioni{
+		position: relative 25px;
+		align-content: top;
+		position: relative;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-direction: reverse;
+	}
+	@keyframes logo {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:30px;}
+  75%  {left:0px; top:30px;}
+  100% {left:0px; top:0px;}
+}
 	img {
   display: block;
   margin-left: auto;
@@ -77,7 +92,7 @@
 <body>
 <header>
 		<h1  id="C4" style="color:#2042a3;">Informacione shtes rreth nesh dhe perdorimit te faqes</h1>
-		<div><a href="Veturaime.html"><img src="vetura.png" alt="Logo" width="180" height="150" style="border:5px blue" align="center"></a></div>
+		<div id="animacioni"><a href="Veturaime.html"><img src="vetura.png" alt="Logo" width="180" height="150" style="border:5px blue" align="center"></a></div>
 		<nav>
 			<ul>
 				<li><a href="Veturaime.html">Ballina</li>
