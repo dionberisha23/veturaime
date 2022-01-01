@@ -89,7 +89,37 @@ header {
 	background-color: black;
 	color: ghostwhite;
 }
+.fundi {
+  column-count: 4;
+}
+P#fundi{
+  font-size: 30px;
+}
+#dragndrop {
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  margin: auto;
+  width: 60%;
+
+}
 </style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
 <body>
 <header>
 		<h1  id="C4" style="color:#2042a3;">Informacione shtes rreth nesh dhe perdorimit te faqes</h1>
@@ -138,6 +168,23 @@ KOSOVE
   style="fill:red; stroke:black; stroke-width:5; opacity:0.5" />
   <text fill="ffffff" font-size="45" font-family="Verdana" x="50" y="86" >ICK</text>
 </svg>
+<p id="fundi" align="center">mund ta terhiqni logon ne box-in e caktuar</p>
+
+<div id="dragndrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag" src="vetura.png" draggable="true" ondragstart="drag(event)" width="200" height="150">
+<p id="fundi" align="center">4 hapa para blerjes së veturës</p>
+<div class="fundi">
+
+Përcaktoni nevojat praktike për veturë
+Për çka do ta përdorni veturën tuaj? Sa pasagjerë do t'i keni zakonisht në veturë? Çfar distance do të vozisni brenda një jave? Si janë rrugët nëpër të cilat do të vozisni?
+Përcakto buxhetin
+Ajo që duhet ta mbani në mend është se blerja e veturës nuk është pagesa e fundit. Mbushja me karburant, mirëmbajtja, riparimi, sigurimi etj janë disa nga pagesat që ju duhet ti bëni në baza javore, mujore apo vjetore.
+Përckato nevojat emocionale
+Sot veturat janë të prodhuara shumë mirë dhe me një kujdes në servisim, ju do t'i keni ato për një kohë të gjatë (mesatarisht 8 vite). Nëse ju nuk e zgjedhni veturën qe ju e pëlqeni, mund të keni momente të padëshiruara. Kështu që sigurohuni që ta zgjedhni makinën e qefit tuaj.
+Hulumto para blerjes
+Blerja e veturës nuk duhet të jetë një punë që ju e kryeni për disa orë, por duhet të jetë një vendim pasi të keni 'hulumtim' të kujdesshëm. Së pari, duhet ti keni kaluar hapat 1,2 dhe 3 si dhe keni bërë një listë potenciale të veturave. Mos merrni vendim të ngutshëm, pa i provuar veturat nga lista e ngushtë.
+</div>
 
 <footer>
   <h3>Numri kontaktues: 045628644<br>
