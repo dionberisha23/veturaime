@@ -30,10 +30,14 @@
   font-family: Tahoma, sans-serif;
   
 }
-	header {
+header {
 		background-color: orange;
-		margin: 0;
+		margin: 0px;
+		transition: background-color 1s;
 	}
+	header:hover {
+		background-color: darkorange;
+		}
 	
 	ul{
 		padding: 0px;
@@ -64,19 +68,16 @@
 		position: relative 25px;
 		align-content: top;
 	}
-	div#animacioni{
+	div#animacioni:hover {
 		position: relative 25px;
 		align-content: top;
 		position: relative;
     animation-name: logo;
-    animation-duration: 4s;
-    animation-direction: reverse;
+    animation-duration: 1s;
 	}
 	@keyframes logo {
   0%   {left:0px; top:0px;}
-  25%  {left:200px; top:0px;}
-  50%  {left:200px; top:30px;}
-  75%  {left:0px; top:30px;}
+  50%  {left:0px; top:10px;}
   100% {left:0px; top:0px;}
 }
 	img {

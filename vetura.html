@@ -10,79 +10,118 @@
 
 </head>
 <style>
-	body {
-		margin: 0px;
+  body {
+    margin: 0px;
   font-family: Tahoma, sans-serif;
   background-color: ghostwhite;
 }
-	header {
-		background-color: orange;
-		margin: 0px;
-	}
+  header {
+    background-color: orange;
+    margin: 0px;
+    transition: background-color 1s;
+    align-self: ;
+  }
+  header:hover {
+    background-color: darkorange;
+    }
+  h1#headeri {
+    text-align: center;
+    font-size: 40px;
+    margin: 0px;
+    padding: 30px;
+  }
+  ul#headeri {
+    padding: 0px;
+    list-style-type: none;
+    margin: 0px;
+    text-align: center;
+    transition:color 1s;
+  }
+  li#headeri {
+    display: inline-block;
+    padding: 15px;
+    background-color: orangered;
+    transition:color 1s;
+  }
+  nav#headeri {
+    padding: 0px;
+    background-color: orangered;
+  }
 	h1{
 		text-align: center;
 		font-size: 40px;
 		margin: 0px;
 		padding: 30px;
 	}
-	ul{
-		padding: 0px;
-		list-style-type: none;
-		margin: 0px;
-		text-align: center;
-	}
+
 	a{
 		text-decoration: none;
 		font-size: 20px;
-	}
-	li{
-		display: inline-block;
-		padding: 15px;
-		background-color: orangered;
-	}
-	nav{
-		padding: 0px;
-		background-color: orangered;
-	}
-	ul li:hover a{
-		color: white;
-	}
-	
-	
-	div{
-		position: relative 25px;
-		align-content: top;
+    display: inline;
 	}
 	img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-  footer{
-	background-color: black;
+p {
+  color: #2042a3;
+  text-indent: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+ul {
+	list-style-position: inside;
+  font-size: 16px;
+  font-family: Arial;
+  text-align: center
+
+}
+ol {
+	list-style-position: inside;
+  font-size: 16px;
+  font-family: Arial;
+  text-align: center
+
+}
+div#logo {
+  transform: rotate(1deg);
+  }
+  div#fillimi {
+  position: absolute; top: 0;
+  width: 100%;
+  }
+   div#body {
+  position:relative; top: 320px;
+  width: 100%;
+  }
+    ul li:hover a{
+    color: white;
+  }
+  ul li.active a{
+    color: white;
+  }
+  div#animacioni:hover{
+    position: relative 25px;
+    align-content: top;
+    position: relative;
+    animation-name: logo;
+    animation-duration: 1s;
+  }
+  @keyframes logo {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:10px;}
+  100%   {left:0px; top:0px;}
+  }
+    footer{
+	background-color: orangered;
 	color: ghostwhite;
 }
 </style>
-<body>
-	<header>
-		<h1 style="color:#2042a3;">Vendi i vetures suaj !!</h1>
-		<div><a href="Veturaime.html"><img src="vetura.png" alt="Logo" width="180" height="150" style="border:5px blue" align="center"></a></div>
-		<nav>
-			<ul>
-				
-				
 
-					</header>
-			</ul>
-
-		</nav>
 	<body>
-		<p>Klikoni<u> llogon </u> per tu kthyer tek ballina.</p>s
-				<p align="left">
-<span style="color:blue;font-weight:bold">Platforma per shit/blerjen e veturave dhe pjeseve</span></h1>
-<hr><p>Platforma me e leht per <span style="color:blue;font-weight:bold">biznesin</span> tuaj</p></hr>
+		<div id="body">
 <hr><input type="text" name="search" class="form-control" placeholder="Kërko sipas termit"></hr>
-<div class="form-group">
 <h3><label for="make"><span style="color:gold;"><i>Marka</i></label></h3>
 <select class="form-control" id="make" name="make"><option value="">Zgjedh markën</option>
 <option value="">Mercedes-Benz</option>
@@ -90,8 +129,6 @@
 <option value="">Audi</option>
 <option value="">Volkswagen</option>
 </select>
-</div>
-<div class="form-group">
 <hr>
 <h3><label for="model"><span style="color:gold;"><i>Modeli</i></label></h3>
 <select class="form-control" id="model" name="model"><option value="">Zgjedh modelin</option>
@@ -121,10 +158,8 @@
 <option value="">X6</option>
 
 </select>
-</div>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="cartype"><span style="color:gold;"><i>Lloji</i></label></h3>
 <select class="form-control" id="cartype" name="cartype"><option value="">Zgjedh llojin</option>
 <option value="1">Limuzinë</option>
@@ -135,43 +170,28 @@
 <option value="9">Kamion</option>
 <option value="10">Tjetër</option>
 </select>
-</div></hr>
+</hr>
 <hr>
-<div class="form-group">
 <h3><label for="pricefrom"><span style="color:gold;"><i>Çmimi</i></label></h3>
-<div class="input-group">
 <input id="pricefrom" type="number" class="form-control" placeholder="Prej" name="pricefrom">
 <input id="priceto" type="number" class="form-control" placeholder="Deri" name="priceto">
-</div>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="yearfrom"><span style="color:gold;"><i>Viti</i></label></h3>
-<div class="input-group">
 <input id="yearfrom" type="number" class="form-control" placeholder="Prej" name="yearfrom" min="1910">
 <input id="yearto" type="number" class="form-control" placeholder="Deri" name="yearto" max="2021">
-</div>
-</div>
 </hr>
-<hr><div class="form-group">
+<hr>
 <h3><label for="enginesizefrom"><span style="color:gold;"><i>Kubikazhi</i></label></h3>
-<div class="input-group">
 <input id="enginesizefrom" type="number" class="form-control" placeholder="Prej" name="enginesizefrom">
 <input id="enginesizeto" type="number" class="form-control" placeholder="Deri" name="enginesizeto" max="10000">
-</div>
-</div>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="kilometersfrom"><span style="color:gold;"><i>Kilometrazhi</i></label></h3>
-<div class="input-group">
 <input id="kilometersfrom" type="number" class="form-control" placeholder="Prej" name="kilometersfrom">
 <input id="kilometersto" type="number" class="form-control" placeholder="Deri" name="kilometersto">
-</div>
-</div>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="fueltype"><span style="color:gold;"><i>Karburanti</i></label></h3>
 <select class="form-control" id="fueltype" name="fueltype"><option value="">Zgjedh karburantin</option>
 <option value="1">Naftë</option>
@@ -181,10 +201,8 @@
 <option value="7">Benzinë + Gas(Plin)</option>
 <option value="8">Tjetër</option>
 </select>
-</div>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="transmission"><span style="color:gold;"><i>Marshi</i></label></h3>
 <select class="form-control" id="transmission" name="transmission"><option value="">Zgjedh marshin</option>
 <option value="1">Automatik</option>
@@ -192,10 +210,8 @@
 <option value="3">Semi-Automatik</option>
 <option value="4">Tiptronik</option>
 </select>
-</div>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="color"><span style="color:gold;"><i>Ngjyra</i></label></h3>
 <select class="form-control" id="color" name="color"><option value="">Zgjedh ngjyren</option>
 <option value="1">Bardhë</option>
@@ -213,7 +229,6 @@
 <option value="13">Tjeter</option>
 <option value="14">Vishnje</option>
 </select>
-</div>
 </hr>
 <hr>
 <form>
@@ -224,7 +239,6 @@
 </form>
 </hr>
 <hr>
-<div class="form-group">
 <h3><label for="City"><span style="color:gold;"><i>Qyteti</i></label></h3>
 <select class="form-control" id="city" name="city"><option value="">Zgjedh vendin</option>
 <option value="1">Prishtinë</option>
@@ -262,7 +276,6 @@
 <option value="34">Rahovec</option>
 <option value="35">Tjeter</option>
 </select>
-</div>
 </hr>
 </p>
 
@@ -276,6 +289,24 @@
   <h3>Numri kontaktues: 045628644<br>
   <a href="ickkosovo@hotmail.com">ickkosovo@hotmail.com</a></h3>
 </footer>
-	
+</div>
 </body>
+
+<div id="fillimi"> 
+<header>
+    <h1 style="color:#2042a3;">Vendi i vetures suaj !!</h1>
+    <div id="animacioni"><a href="Veturaime.html"><img src="vetura.png" alt="Logo" width="180" height="150" style="border:5px blue" align="center"></a></div>
+    <nav id="headeri">
+      <ul id="headeri">
+        <li id="headeri"><a id="headeri" href="Veturaime.html">Ballina</li>
+        <li id="headeri"><a id="headeri" href="autopjes.html">Autopjes</li>
+        <li id="headeri"><a id="headeri" href="vetura.html">Vetura</li>
+        <li id="headeri"><a id="headeri" href="VeturaMeQera.html">Rent</li>
+        <li id="headeri"><a id="headeri" href="RrethNesh.html">Rreth nesh</li>
+
+          </header>
+          </div>
+      </ul>
+
+    </nav>
 </html>
