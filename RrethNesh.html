@@ -12,6 +12,7 @@
 		margin: 0px;
 		padding: 30px;
 		text-shadow: 2px 2px;
+		text-transform: uppercase;
 	}
 
 	h2{
@@ -109,27 +110,31 @@ P#fundi{
 #prapavija {
   border: 1px solid black;
   background-size: 100px 80px;
-  background: url(Background.gif);
+  background: url(Background.jpg);
   background-repeat: no-repeat;
+  position: static;
+  background-origin: content-box;
+  background-size: cover;
   padding: 15px;
 }
+
+#gradlinear {
+  height: 200px; 
+  background-image: linear-gradient(white, orangered);
+}
+
+#gradradial {
+  height: 150px;
+  width: 200px;
+  background-image: radial-gradient(red, orangered, white);
+}
 </style>
-<script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-</script>
 <body>
+
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
 <header>
 		<h1  id="C4" style="color:#2042a3;">Informacione shtes rreth nesh dhe perdorimit te faqes</h1>
 		<div id="animacioni"><a href="Veturaime.html"><img src="vetura.png" alt="Logo" width="180" height="150" style="border:5px blue" align="center"></a></div>
@@ -197,11 +202,39 @@ Blerja e veturës nuk duhet të jetë një punë që ju e kryeni për disa orë,
 
 <div id="prapavija">
 	 <img src="Background.jpg" alt="prapavija">
+	 <h3>Fotografia ne prapavij</h3>
 </div>
+
+<div id="gradradial"></div>
+
+<div id="gradlinear"></div>
+
 <footer>
   <h3>Numri kontaktues: 045628644<br>
   <a href="ickkosovo@hotmail.com">ickkosovo@hotmail.com</a></h3>
 </footer>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+</script>
 
 </body>
 </html>
