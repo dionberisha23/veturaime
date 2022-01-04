@@ -117,11 +117,24 @@ div#logo {
 	background-color: orangered;
 	color: ghostwhite;
 }
+div.video {
+  text-align: center;
+}
 </style>
 	<body>
 		<div id="body">
-				<p align="left">
-<span style="color:blue;font-weight:bold">Faleminderit per pergjigjen!</span></h1>
+<p align="center">kliko per ta ndryshuar tekstin</p>
+<div class="video">
+<button onclick="myFunction()">ndrysho titullin</button>
+</div>
+<div id="body">
+<script>
+function myFunction() {
+  var x = document.getElementsByTagName("h1")[0];
+  x.outerHTML = "<h3>Sapo keni ndruar tekstin</h3>";
+}
+</script>
+</div>
 </div>
 </body>
 
