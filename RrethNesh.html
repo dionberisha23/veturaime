@@ -129,6 +129,9 @@ P#fundi{
   width: 200px;
   background-image: radial-gradient(red, orangered, white);
 }
+div.qender {
+  text-align: center;
+}
 </style>
 
 <body>
@@ -243,6 +246,23 @@ ctx.lineTo(200,100);
 ctx.stroke();
 
 </script>
+<div class="qender">
+<button onclick="myFunction()">Shtyp</button>
+</div>
 
+<p id="warning" align="center"></p>
+
+<script>
+  let konfirmimi = "ti shtype butonin!";
+function myFunction() {
+  var txt;
+  if (confirm(konfirmimi)) {
+    txt = "ti shtype OK!";
+  } else {
+    txt = "ti shtype Cancel!";
+  }
+  document.getElementById("warning").innerHTML = txt;
+}
+</script>
 </body>
 </html>

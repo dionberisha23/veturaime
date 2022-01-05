@@ -117,6 +117,9 @@ div#logo {
 	background-color: orangered;
 	color: ghostwhite;
 }
+div.qender {
+  text-align: center;
+}
 </style>
 	<body>
 		<div id="body">
@@ -151,6 +154,25 @@ div#logo {
   <a href="ickkosovo@hotmail.com">ickkosovo@hotmail.com</a></h3>
 
 </footer>
+<div class="qender">
+<button onclick="myFunction()">Shtyp</button>
+</div>
+
+<p id="warning" align="center"></p>
+
+<script>
+  let konfirmimi = "ti shtype butonin!";
+function myFunction() {
+  var txt;
+  if (confirm(konfirmimi)) {
+    txt = "ti shtype OK!";
+  } else {
+    txt = "ti shtype Cancel!";
+  }
+  document.getElementById("warning").innerHTML = txt;
+}
+</script>
+
 </div>
 </body>
 
