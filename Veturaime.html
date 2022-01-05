@@ -166,7 +166,21 @@ function myFunction() {
   document.getElementById("warning").innerHTML = txt;
 }
 </script>
+<div class="qender">
+<button onclick="vargjet()">shto marka</button>
 
+<p id="vargu"></p>
+</div>
+
+<script>
+const markat = ["mercedes", "audi", "bmw"];
+document.getElementById("vargu").innerHTML = markat;
+
+function vargjet() {
+  markat.push("volkswagen");
+  document.getElementById("vargu").innerHTML = markat;
+}
+</script>
 
 </body>
 </html>

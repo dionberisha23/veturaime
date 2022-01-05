@@ -189,7 +189,7 @@ KOSOVE
 
 <div id="dragndrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<img id="drag" src="vetura.png" draggable="true" ondragstart="drag(event)" width="200" height="150">
+<img id="drag1" src="vetura.png" draggable="true" ondragstart="drag(event)" width="200" height="150">
 <p id="fundi" align="center">4 hapa para blerjes së veturës</p>
 <div class="fundi">
 
@@ -238,6 +238,10 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+  <script>
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
