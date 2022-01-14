@@ -268,5 +268,17 @@ function myFunction() {
   document.getElementById("warning").innerHTML = txt;
 }
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h2").hide();
+  });
+});
+</script>
+
+<button>Click me to hide h2</button>
+
 </body>
 </html>
