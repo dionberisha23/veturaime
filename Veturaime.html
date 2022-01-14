@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -126,11 +126,15 @@ div#animacioni:hover{
   <text fill="ffffff" font-size="45" font-family="Verdana" x="50" y="86" >Vetura juaj</text>
 </svg>
 
+<button id="Fshehe">Fshehe llogon</button>
+<button id="Shfaqe">Shfaqe llogon</button>
+
+
 <footer>
   <h3>Numri kontaktues: 045628644<br>
   <a href="ickkosovo@hotmail.com">ickkosovo@hotmail.com</a></h3>
 </footer>
-<form name="pytsori" action="flm.html" method="get" autocomplete="on">
+<form action="flm.html" method="get" autocomplete="on">
   <label for="pytsor">a jeni te kenaqur me faqen:</label>
   <input list="pergjigjet" name="pergjigje" id="pergjigje">
   <datalist id="pergjigjet">
@@ -180,6 +184,18 @@ function vargjet() {
   markat.push("volkswagen");
   document.getElementById("vargu").innerHTML = markat;
 }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#Fshehe").click(function(){
+    $("svg").hide();
+  });
+  $("#Shfaqe").click(function(){
+    $("svg").show();
+  });
+});
 </script>
 
 </body>
