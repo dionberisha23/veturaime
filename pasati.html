@@ -123,7 +123,13 @@ div#logo {
 <body>		
 	<div id="body">
     <img id="pasati" src="pasati.jpg" alt="pasati" width="600" height="400" style="border:5px blue" align="center">
-            <p>Passat b7</p>
+            <p id="passati"></p>
+
+<script>
+let text = "Passat b7 2012 full opsion";
+let result = /Passat b7/.exec(text);
+document.getElementById("passati").innerHTML = result;
+</script>
           <p>11,300eur</p>
           <table style="width:25%"
 cellspacing="3"
