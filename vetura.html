@@ -310,6 +310,31 @@ function myFunction() {
   document.getElementById("warning").innerHTML = txt;
 }
 </script>
+<form>
+    viti : <input type="integer" 
+    id="viti" /><br>
+    kubikazha: <input type="nînteger" 
+    id="kubikazha" /><br>
+    <input type="button" onClick="dogana()" 
+    Value="llogarit doganen" /><br>
+  </form>
+  
+  <p>dogana eshte : <br>
+   <span id = "rezultati"></span>
+  </p>
+  
+  
+  <script>
+    function dogana()
+    {
+      num1 = document.getElementById(
+        "viti").value;
+      num2 = document.getElementById(
+        "kubikazha").value;
+      document.getElementById(
+        "rezultati").innerHTML = num1 * (num2/1500) +"  euro";
+    }
+  </script>
 </div>
 </body>
 
