@@ -192,14 +192,14 @@ function makina(emri, tipi, viti, ngjyra) {
   this.viti = viti;
   this.ngjyra = ngjyra;
 }
+makina.prototype.vendndodhja = "Kosove";
 
 
  makina1 = new makina("Mercedes", "sedan", 2014, "zeze");
 
 
-
 document.getElementById("vetura").innerHTML =
-"vetura ne vijim eshte " + makina1.emri + " e llojit " + makina1.tipi + " e prodhuar ne vitin " + makina1.viti + " me ngjyre te " + makina1.ngjyra; 
+"vetura ne vijim eshte " + makina1.emri + " e llojit " + makina1.tipi + " e prodhuar ne vitin " + makina1.viti + "<br>" + isNaN(makina1.viti) + " me ngjyre te " + makina1.ngjyra + " dhe me vendndodhje ne " + makina1.vendndodhja;
 </script>
 </div>
 </body>
