@@ -269,6 +269,7 @@ function myFunction() {
 }
 </script>
 
+<<<<<<< HEAD
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -280,5 +281,26 @@ $(document).ready(function(){
 
 <button>Click me to hide h2</button>
 
+=======
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Emri nuk eshte shenuar");
+    return false;
+  }
+}
+</script>
+
+
+<h2>Valido emrin</h2>
+
+<div class="qender">
+<form name="myForm" action="flm.html" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+</div>
+>>>>>>> 204c6393ccb6055ec34d294779aca86a053614e2
 </body>
 </html>

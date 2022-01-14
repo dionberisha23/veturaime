@@ -181,6 +181,26 @@ cellspacing="3"
   <source src="audio.mp3" type="audio/mpeg">
 </audio>
 </div>
+<p id="vetura"></p>
+
+<script>
+
+
+function makina(emri, tipi, viti, ngjyra) {
+  this.emri = emri;
+  this.tipi = tipi;
+  this.viti = viti;
+  this.ngjyra = ngjyra;
+}
+
+
+const makina1 = new makina("mercedes", "sedan", 2014, "zeze");
+
+
+
+document.getElementById("vetura").innerHTML =
+"vetura ne vijim eshte " + makina1.emri + " e llojit " + makina1.tipi + " e prodhuar ne vitin " + makina1.viti + " me ngjyre te " + makina1.ngjyra; 
+</script>
 </div>
 </body>
 

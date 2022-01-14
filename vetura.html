@@ -310,6 +310,32 @@ function myFunction() {
   document.getElementById("warning").innerHTML = txt;
 }
 </script>
+<p>vendosni vitin e makines:</p>
+<div class="qender">
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">klikoni</button>
+</div>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "zbrazet";
+    if(isNaN(x)) throw "seshte numer";
+    x = Number(x);
+    if(x < 2012)  throw "nuk mund te dogganohet";
+    if(x > 2022)   throw "nuk ka dal ne treg";
+    if((x < 2022)&&(x > 2012))  throw "mund te doganohet";
+  }
+  catch(err) {
+    message.innerHTML = "Kjo makine " + err;
+  }
+}
+</script>
+<div class="qender">
 <form>
     viti : <input type="integer" 
     id="viti" /><br>
@@ -318,6 +344,7 @@ function myFunction() {
     <input type="button" onClick="dogana()" 
     Value="llogarit doganen" /><br>
   </form>
+</div>
   
   <p>dogana eshte : <br>
    <span id = "rezultati"></span>
