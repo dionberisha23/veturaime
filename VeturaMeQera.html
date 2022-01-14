@@ -197,6 +197,12 @@ div.qender {
 <form action="Veturaime.html">
 <input type="submit" value="Kërko" class="btn btn-block btn-primary text-center" style="position:sticky; bottom: 10px;">
 	</form>
+<button>Klikoni butonin</button><br><br>
+	<div id="d1" style="width:50px;height:80px;background-color:red;"></div>
+<br>
+<div id="d2" style="width:50px;height:80px;background-color:green;"></div>
+<br>
+<div id="d3" style="width:50px;height:80px;background-color:blue;"></div>
 
 <footer>
   <h3>Numri kontaktues: 045628644<br>
@@ -222,6 +228,17 @@ function myFunction() {
 </script>
 </div>
 	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#d1").fadeToggle();
+    $("#d2").fadeToggle("slow");
+    $("#d3").fadeToggle(3000);
+  });
+});
+</script>
+
 </body>
 
 <div id="fillimi"> 
