@@ -185,7 +185,15 @@ KOSOVE
   style="fill:red; stroke:black; stroke-width:5; opacity:0.5" />
   <text fill="ffffff" font-size="45" font-family="Verdana" x="50" y="86" >ICK</text>
 </svg>
-<p id="fundi" align="center">mund ta terhiqni logon ne box-in e caktuar</p>
+<p id="fundi" align="center"></p>
+
+<script>
+let text = "mund ta terhiqni logon ne box-in e caktuar per ta demostruar drag and drop";
+let pattern = /mund ta terhiqni logon ne box-in e caktuar/g;
+let result = text.match(pattern);
+
+document.getElementById("fundi").innerHTML = result;
+</script>
 
 <div id="dragndrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
@@ -293,7 +301,15 @@ function validateForm() {
 </script>
 
 
-<h2>Valido emrin</h2>
+<p id="demo" align="center"></p>
+
+<script>
+let text = "Valido Emrin e Juaj";
+let pattern = /Valido Emrin/i;
+let result = text.match(pattern);
+
+document.getElementById("demo").innerHTML = result;
+</script>
 
 <div class="qender">
 <form name="myForm" action="flm.html" onsubmit="return validateForm()" method="post">
