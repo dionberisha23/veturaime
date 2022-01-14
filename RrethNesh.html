@@ -268,5 +268,25 @@ function myFunction() {
   document.getElementById("warning").innerHTML = txt;
 }
 </script>
+
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Emri nuk eshte shenuar");
+    return false;
+  }
+}
+</script>
+
+
+<h2>Valido emrin</h2>
+
+<div class="qender">
+<form name="myForm" action="flm.html" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+</div>
 </body>
 </html>
