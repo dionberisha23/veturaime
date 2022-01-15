@@ -286,6 +286,13 @@ div.qender {
 </hr>
 </p>
 
+<ol>
+  <li>BMW</li>
+  <li>Mercedes-Benz</li>
+  <li>Audi</li>
+</ol>
+
+<button id="btn1">Shto vetura</button>
 
 <hr>
 <form action="Veturaime.html" autocomplete="on">
@@ -375,6 +382,15 @@ $(document).ready(function(){
     $(this).hide();
   });
 });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("ol").append("<li>Opel</li>");
+  });
+  });
 </script>
 
 </body>
