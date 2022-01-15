@@ -185,10 +185,12 @@ KOSOVE
 <a href="mailto:dion.berisha1@student.uni-pr.edu">kontakti me email</a>
 <p><a href="#C4">kthehu te fillimi i faqes</a></p>
 
-<figure>
+<figure id="div1">
   <img src="Autosalloni.png" alt="Autosalloni" style="width:100%">
   <figcaption>Pamje nga jasht e autosallonit</figcaption>
 </figure>
+
+<button>Fshehe foton</button>
 
 <svg width="400" height="180">
   <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
@@ -321,6 +323,15 @@ let pattern = /Valido Emrin/i;
 let result = text.match(pattern);
 
 document.getElementById("demo").innerHTML = result;
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").remove();
+  });
+});
 </script>
 
 <div class="qender">
