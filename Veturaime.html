@@ -158,6 +158,9 @@ document.getElementById("tekst").innerHTML = "Per tu kthyer ne ballin klikoni lo
 
 <p id="warning" align="center"></p>
 
+<button>Fillo animacionin</button>
+<div class="rreshqit"><a href="Veturaime.html"><img src="vetura.png" alt="Logo" width="180" height="150" style="border:5px blue" align="center"></a></div>
+
 <script>
 	let konfirmimi = "ti shtype butonin!";
 function myFunction() {
@@ -194,6 +197,15 @@ $(document).ready(function(){
   });
   $("#Shfaqe").click(function(){
     $("svg").show();
+  });
+});
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".rreshqit").animate({left:'150px'});
   });
 });
 </script>
