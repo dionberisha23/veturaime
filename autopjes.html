@@ -172,6 +172,24 @@ function myFunction() {
   document.getElementById("warning").innerHTML = txt;
 }
 </script>
+<div class="qender">
+ <script>
+         function bigLoop() {
+            
+            for (var i = 0; i <= 10000; i += 1) {
+               var j = i;
+            }
+            alert("Completed " + j + "iterations" );
+         }
+         
+         function sayHello(){
+            alert("Hello sir...." );
+         }
+      </script>
+      <input type = "button" onclick = "bigLoop();" value = "Big Loop" />
+      <input type = "button" onclick = "sayHello();" value = "Say Hello" />
+    </div>
+
 
 </div>
 </body>
